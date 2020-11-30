@@ -21,5 +21,3 @@ This is not too hard to use if you can follow directions.
 No, I will not tell you how to make a discord bot, but Google happily will.
 
 I offer pro bono help when I'm in the mood.
-
-Yes, I know that there are tokens and other private stuffs in the commit history. No, they don't work anymore.
