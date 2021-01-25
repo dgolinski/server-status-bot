@@ -9,6 +9,8 @@ const server = {
     port: prefs["server-port"]
 };
 
+//setup command syntax
+
 const commands = {
     status: {
         command: 'z!status'
@@ -23,10 +25,10 @@ const commands = {
 };
 
 
-const cacheTime = 5 * 1000; // 5 sec cache time
+const cacheTime = 5 * 1000; // 5 second data cache time
 let data, lastUpdated = 0;
 
-
+// set bot status
 
 client.on('ready', () => {
     console.log('ready!')
@@ -38,7 +40,6 @@ client.on('ready', () => {
 })
 
 function updateStatus() {
-
     util.status(server.ip, {
             port: server.port
         })
@@ -77,7 +78,7 @@ function setPresence(data) {
     }
 }
 
-client.on('message', message => { // Listen for messages and trigger commands
+client.on('message', message => { // Listen for messages with trigger commands
     if (message.content.trim() == commands.status.command) {
         statusCommand(message)
     } else if (message.content.trim() == commands.ip.command) {
